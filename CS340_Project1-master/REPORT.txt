@@ -1,0 +1,40 @@
+* Assuming log base 2 of n for log(n)
+
+1. What is the expected asymptotic behavior:
+    a. In the worst (default) case?
+    b. In the best case, if there is an expected difference?
+2. And, do your plots reflect that behavior accurately?
+    a. Which algorithm had the best runtime on Sorted inputs?
+    b. Which algorithm had the best runtime on Permuted inputs?
+    c. Which algorithm had the worst runtime on Permuted inputs?
+    d. Which algorithm had almost the same runtime for its Sorted and Permuted input files of the same size?
+3. Discuss the “why” of the previous bullet point (2). If you’re not seeing 
+    expected behavior, you can also discuss programming language and
+    implementation related details that you might find explanatory.
+
+
+    1.
+    Insertion Sort:
+        a. The expected asymptotic behavior in the worst (default) case is Θ(n^2)
+        b. The expected asymptotic behavior in the best case is Θ(n)
+
+    Merge Sort:
+        a. The expected asymptotic behavior in the worst (default) case is Θ(nlog(n))
+        b. The expected asymptotic behavior in the best case is Θ(nlog(n))
+
+    Heap Sort:
+        a. The expected asymptotic behavior in the worst (default) case is Θ(nlog(n))
+        b. The expected asymptotic behavior in the best case is Θ(nlog(n))
+
+    2.  My plots reflect that behavior accurately
+        a. Insertion Sort had the best runtime on Sorted inputs
+        b. Merge Sort had the best runtime on Permuted inputs
+        c. Insertion Sort had the worst runtime on Permuted inputs
+        d. Heap Sort and Merge Sort had almost the same runtime for its Sorted and Permuted input files of the same size, although Merge Sort was closer
+    3. 
+        a. Insertion Sort had the best runtime on Sorted inputs because in its best case where a list is already sorted, it only takes Θ(n) to verify the list is already sorted
+        b. Merge Sort had the best runtime on Permuted inputs because it is slightly faster than Heap Sort when sorting large lists, but it takes up more memory than Heap Sort
+            because of the multiple lists
+        c. Insertion Sort by far had the worst runtime on Permuted inputs because it is Θ(n^2) which scales much worse than Merge Sort and Heap Sorts Θ(nlog(n)) time complexity
+        d. Heap Sort and Merge Sort will have almost the same runtime for Sorted and Permuted sorting because their time complexity is the same in the best case and worst case
+
